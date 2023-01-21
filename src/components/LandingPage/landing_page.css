@@ -1,0 +1,18 @@
+.landing_page{
+    display: flex;
+}
+.landing_btn{
+    height: 35px;
+    width: 65px;
+    background-color: aliceblue;
+    color:blue;
+    border: 2px solid #008CBA;
+    border-radius: 5px;
+}
+.landing_text,.landing_btn{
+    margin-top: 9rem;
+    color: green;
+}
+ .landing_text{
+    margin-left: 7rem
+ }
