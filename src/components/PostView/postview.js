@@ -3,7 +3,7 @@ import Card from '../../card';
 const Postview=()=> {
   const [post, setPost] = useState([]);
   useEffect(()=>{
-    fetch("http://localhost:8085/all").then((res)=> res.json()).then((data)=>{
+    fetch("https://dark-colt-clothes.cyclic.app/all").then((res)=> res.json()).then((data)=>{
     setPost(data);
     }).catch((err)=>{
       if(err){

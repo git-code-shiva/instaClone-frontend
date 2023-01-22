@@ -28,7 +28,7 @@ const Form=()=>{
     }
     useEffect(()=>{
         if(imageURL){
-            fetch("http://localhost:8085/createPost",{
+            fetch("https://dark-colt-clothes.cyclic.app/createPost",{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"
