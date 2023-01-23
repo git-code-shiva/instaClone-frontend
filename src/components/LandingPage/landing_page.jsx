@@ -11,8 +11,10 @@ const Landing_page=()=>{
         <>
             <div className="landing_page">
                 <img src={require("../../images/landing_page.png")} alt="landing_page" className='landing_img'/>
-                <h2 className="landing_text">10X Team 04</h2>
-                <button className="landing_btn" onClick={navigateToContent}>Enter</button>
+                <div className='textandbtn'>
+                    <h2 className="landing_text">10X Team 04</h2>
+                    <button className="landing_btn" onClick={navigateToContent}>Enter</button>
+                </div>
             </div>
         </>
     )

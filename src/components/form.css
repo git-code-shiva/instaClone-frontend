@@ -16,7 +16,12 @@ height: 32px;
 background: #F0F0F0 0% 0% no-repeat padding-box;
 border: 1px solid #707070;
 border-radius: 5px;
+}
 
+button:hover{
+    background: #b2b7bb;
+  transition: all 0.5s ease;
+  cursor: pointer;
 }
 
 .first-sec{

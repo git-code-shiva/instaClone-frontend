@@ -1,5 +1,10 @@
 import './card.css'
 const Card=({post})=>{
+    const fullDate = new Date();
+    const d = fullDate.getDate();
+    const m = fullDate.getMonth();
+    const y = fullDate.getFullYear();
+    const date = `${d}-${m+1}-${y}`
     return(
         <>
             <section className="card">
@@ -19,6 +24,7 @@ const Card=({post})=>{
                     <span><i className="fa fa-heart" aria-hidden="true"></i></span>
                     <span><i className="fa fa-paper-plane" aria-hidden="true"></i></span>
                     {/* <span>{post.date}</span> */}
+                    <span>{date}</span>
                 </section>
                 <section className="likes">
                     {/* {post.likes} Likes */}
