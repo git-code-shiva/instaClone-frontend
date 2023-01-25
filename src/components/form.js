@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "./header/header";
 import "./form.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Form = () => {
   const navigate = useNavigate();
@@ -42,8 +45,10 @@ const Form = () => {
         .then((res) => res.json())
         .then((data) => {
           if (data.error) {
+            toast.error("Error while posting")
           } else {
             console.log(data);
+            toast.success("Post Successful")
             navigate("/main_page");
           }
         })
@@ -62,18 +67,24 @@ const Form = () => {
     data.append("cloud_name", "cloudsundi");
 
     //url for fecting the data from cloudinary server
+    toast.info("Uploading image...", { autoClose: false });
     fetch("https://api.cloudinary.com/v1_1/cloudsundi/image/upload", {
       method: "post",
       body: data,
     })
       .then((res) => res.json())
       //send url to contant
-      .then((data) => setimageURL(data.url))
+      // .then((data) => setimageURL(data.url))
+      .then((data) => {
+        toast.dismiss();
+        setimageURL(data.url)
+      })    
       .catch((err) => console.log(err));
   };
 
   return (
     <>
+      <ToastContainer />
       <Header />
       <div className="root-container">
         <div className="container">
