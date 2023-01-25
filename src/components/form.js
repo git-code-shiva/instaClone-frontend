@@ -67,7 +67,7 @@ const Form = () => {
     data.append("cloud_name", "cloudsundi");
 
     //url for fecting the data from cloudinary server
-    toast.info("Uploading image...", { autoClose: false });
+    toast.info("Uploading image...", { autoClose: true });
     fetch("https://api.cloudinary.com/v1_1/cloudsundi/image/upload", {
       method: "post",
       body: data,
